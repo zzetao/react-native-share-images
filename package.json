@@ -1,0 +1,18 @@
+{
+  "name": "react-native-share-images",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steven Zhang",
+  "license": "ISC",
+  "private": "true",
+  "peerDependencies": {
+    "react-native": "",
+    "fbjs": ""
+  },
+  "dependencies": {
+  }
+}
