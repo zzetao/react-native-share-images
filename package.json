@@ -10,8 +10,6 @@
   "license": "ISC",
   "private": "true",
   "peerDependencies": {
-    "react-native": "",
-    "fbjs": ""
   },
   "dependencies": {
   }
