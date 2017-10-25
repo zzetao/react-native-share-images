@@ -6,6 +6,7 @@
 //  Copyright © 2017年 mojie. All rights reserved.
 //
 
+#import "ShareItem.h"
 #import "RCTShareManager.h"
 
 #import <React/RCTBridge.h>
