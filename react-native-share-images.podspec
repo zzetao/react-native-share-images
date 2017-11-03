@@ -8,11 +8,12 @@ Pod::Spec.new do |s|
   s.summary      = "React Native API to share multiple images"
 
   s.authors      = { "mojie" => "steven.zhang@mojie.hk" }
-  s.homepage     = "https://github.com/flamingheart/react-native-share-images#readme"
+  s.homepage     = "https://github.com/theflaming/react-native-share-images#readme"
   s.license      = "MIT"
 
-  s.source       = { :git => "https://github.com/flamingheart/react-native-share-images.git" }
+  s.source       = { :git => "https://github.com/theflaming/react-native-share-images.git" }
   s.source_files  = "ios/**/*.{h,m}"
 
+  s.platforms               = { :ios => "8.0", :tvos => "9.2" }
   s.dependency   "React"
 end
