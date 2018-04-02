@@ -78,6 +78,17 @@ RCT_EXPORT_METHOD(showShareWithOptions:(NSDictionary *)options
                   return;
               }
               [items addObject:data];
+          } else if ([URL.scheme.lowercaseString isEqualToString:@"file"]) {
+              NSError *error;
+              NSData *data = [NSData dataWithContentsOfURL:URL
+                                                   options:(NSDataReadingOptions)0
+                                                     error:&error];
+              UIImage *imageData = [UIImage imageWithData:data];
+              if (!data) {
+                  failureCallback(error);
+                  return;
+              }
+              [items addObject:imageData];
           } else {
               [items addObject:URL];
           }
