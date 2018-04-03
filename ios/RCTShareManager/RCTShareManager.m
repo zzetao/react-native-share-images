@@ -13,6 +13,7 @@
 #import <React/RCTLog.h>
 #import <React/RCTUIManager.h>
 #import <React/RCTUtils.h>
+#import "ActivityItem.h"
 
 @interface RCTShareManager () <UIActionSheetDelegate>
 @end
@@ -83,12 +84,18 @@ RCT_EXPORT_METHOD(showShareWithOptions:(NSDictionary *)options
               NSData *data = [NSData dataWithContentsOfURL:URL
                                                    options:(NSDataReadingOptions)0
                                                      error:&error];
-              UIImage *imageData = [UIImage imageWithData:data];
               if (!data) {
                   failureCallback(error);
                   return;
               }
-              [items addObject:imageData];
+
+              UIImage *imageData = [UIImage imageWithData:UIImagePNGRepresentation(data)];
+
+              ActivityItem *item = [ActivityItem new];
+              item.image = imageData;
+              item.imagePath = URL;
+
+              [items addObject:item];
           } else {
               [items addObject:URL];
           }
