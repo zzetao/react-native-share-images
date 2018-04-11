@@ -89,11 +89,11 @@ RCT_EXPORT_METHOD(showShareWithOptions:(NSDictionary *)options
                   return;
               }
 
-              UIImage *imageData = [UIImage imageWithData:UIImagePNGRepresentation(data)];
+              UIImage *imageData = [UIImage imageWithData: data];
 
-              ActivityItem *item = [ActivityItem new];
-              item.image = imageData;
-              item.imagePath = URL;
+              // ActivityItem *item = [ActivityItem new];
+              // item.image = imageData;
+              // item.imagePath = URL;
 
               [items addObject:item];
           } else {
