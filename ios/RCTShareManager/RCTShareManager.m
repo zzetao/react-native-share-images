@@ -95,7 +95,7 @@ RCT_EXPORT_METHOD(showShareWithOptions:(NSDictionary *)options
               // item.image = imageData;
               // item.imagePath = URL;
 
-              [items addObject:item];
+              [items addObject:imageData];
           } else {
               [items addObject:URL];
           }
